@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>
+  <body class="relative">
+    {{> nav}}
+    <main class="page-wrapper bg-black">
+      <section id="shop-hero" class="hero bg-stone-900 lg:pt-[88px] pb-4 lg:pb-12">
+
+        <div class="container">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-5/12 mb-12 lg:mb-0">
+                    <h5 class="text-red-500 font-bold tracking-widest uppercase mb-2 text-center lg:text-start">Chef's Selection</h5>
+                    <h1 class="text-white text-4xl lg:text-6xl font-meno max-w-3xl text-center lg:text-start">NY Strip with Roasted Mushrooms & Creamed Spinach</h1>
+                    <div class="flex gap-6 mt-6 text-white/60 justify-center lg:justify-start">
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <span>Prep: 15m</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            <span>Cook: 25m</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            <span>Serves 2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <img 
+                        src="../src/assets/recipes/NYStrip.jpg" 
+                        alt="Sear & Serve" 
+                        class="w-full rounded-md"
+                    />
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+        <section class="bg-white py-12">
+            <div class="container grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- INGREDIENTS (Left Sidebar) -->
+                <div class="lg:col-span-4 space-y-8">
+                    <div class="bg-paper p-8 rounded-md">
+                        <h3 class="font-meno text-3xl mb-6 border-b border-black/30 pb-2">Ingredients</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="font-bold text-red-dark text-sm uppercase tracking-wider mb-3">The Meat</h5>
+                                <ul class="space-y-2 text-black/70">
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 2 (12oz) Sear & Serve NY Strip Steaks</li>
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 2 tbsp Unsalted Butter</li>
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 2 sprigs Fresh Rosemary</li>
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> Kosher Salt & Black Pepper</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-red-dark text-sm uppercase tracking-wider mb-3">Creamed Spinach</h5>
+                                <ul class="space-y-2 text-black/70">
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 10oz Fresh Spinach (or frozen, thawed)</li>
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 1 small Shallot, minced</li>
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 2 cloves Garlic, minced</li>
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 1/2 cup Heavy Cream</li>
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 1/4 cup Parmesan Cheese</li>
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> Pinch of Nutmeg</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-red-dark text-sm uppercase tracking-wider mb-3">Mushrooms</h5>
+                                <ul class="space-y-2 text-black/70">
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 8oz Cremini Mushrooms, sliced</li>
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 1 tbsp Olive Oil</li>
+                                    <li class="flex gap-2"><span class="text-red-500">•</span> 1 tsp Fresh Thyme</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-black/30">
+                            <p class="mb-4 text-sm text-black/70">Need the main ingredient?</p>
+                            <a href="/pages/shop.html" class="btn btn-primary w-full text-center">Shop NY Strip</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INSTRUCTIONS (Main Content) -->
+                <div class="lg:col-span-8">
+                    <h3 class="font-meno text-3xl mb-8">Instructions</h3>
+                    
+                    <div class="space-y-12">
+                        
+                        <!-- Step 1 -->
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-xl font-meno">1</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-3">Prepare the Steak</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    If product is frozen, thaw overnight under refrigeration. Preheat oven to 400 °F. Open pouch and remove NY Strip Steak. <strong class="text-red">Discard the plastic pouch.</strong><br>
+                                    In a pan over medium heat, add 2 tbsp of olive oil. Once hot, add NY Strip Steak and sear the top side for  2 minutes. Flip over and sear the other side for 2 minutes. 
+                                    Remove NY Strip Steak from the pan and transfer to an oven-safe baking sheet. Place baking sheet in the oven and cook for 12-14 minutes. 
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-xl font-meno">2</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-3">Roast the Mushrooms</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Heat a large cast-iron skillet over medium-high heat with olive oil. Add the mushrooms in a single layer (don't crowd the pan, or they will steam instead of brown). Cook undisturbed for 3-4 minutes until golden. Stir, add thyme, salt, and pepper, and cook for another 2 minutes. Remove mushrooms from the pan and set aside.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold text-xl font-meno">3</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-3">Make the Creamed Spinach</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    In the same pan, reduce heat to medium. Add a knob of butter, shallots, and garlic. Sauté until fragrant (1 min). Add the spinach in batches, tossing until wilted. Pour in the heavy cream and bring to a gentle simmer. Stir in the parmesan and nutmeg. Cook until the sauce thickens and coats the spinach leaves glossy green. Season to taste and keep warm.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red text-white rounded-full flex items-center justify-center font-bold text-xl font-meno">4</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-3 text-red">Serve</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Let the steaks rest for 1 minutes before slicing against the grain. Plate the sliced steak alongside a generous helping of the creamed spinach and top with the roasted mushrooms.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    {{> footer}}
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

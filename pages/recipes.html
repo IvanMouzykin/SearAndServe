@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>
+  <body class="relative">
+    {{> nav}}
+    <main class="page-wrapper bg-black">
+      <section id="shop-hero" class="hero">
+        <!-- Background Image -->
+        <div class="absolute inset-x-0 bottom-[-2rem] lg:bottom-[-20vw]">
+          <img 
+            src="../src/assets/FogoDeChao_014.jpg" 
+            alt="Sear & Serve" 
+            class="hidden lg:inline w-full h-full object-cover object-center"
+          />
+
+          <img
+          src="../src/assets/FogoDeChao_014.jpg"
+          alt="Sear & Serve"
+          class="lg:hidden w-full object-bottom object-contain"
+          />
+
+          <!-- Optional dark overlay -->
+          <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="container relative z-1">
+          <h1 class="text-white">Recipes</h1>
+        </div>
+      </section>
+      <section id="recipes" class="pt-12 shop-wrapper bg-white">
+        <div class="container">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12">
+
+            {{#each recipes}}
+            <!-- RECIPE CARD START -->
+            <a href="{{url}}" class="block  group cursor-pointer">
+              <!-- RECIPE IMAGE -->
+              <div class="overflow-hidden aspect-[4/3] rounded-md mb-4 relative">
+                <img 
+                  src="{{image}}" 
+                  alt="{{name}}" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                />
+                <!-- Time Badge Overlay -->
+                <div class="absolute bottom-3 right-3 bg-black/80 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {{time}}
+                </div>
+              </div>
+              
+              <!-- CONTENT -->
+              <div class="px-1">
+                <h5 class="text-2xl font-meno text-black mb-2 group-hover:text-red-700 transition-colors">
+                  {{name}}
+                </h5>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    {{description}}
+                </p>
+                <div class="border-t border-gray-200 pt-3">
+                    <span class="text-xs font-bold text-red-700 uppercase tracking-wider flex items-center gap-2">
+                        View Recipe 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </span>
+                </div>
+              </div>
+            </a>
+            <!-- RECIPE CARD END -->
+            {{/each}}
+
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer}}
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

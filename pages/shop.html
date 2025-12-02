@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>
+  <body class="relative">
+    {{> nav}}
+    <main class="page-wrapper bg-black">
+      <section id="shop-hero" class="hero">
+        <!-- Background Image -->
+        <div class="absolute inset-x-0 bottom-[-2rem] lg:bottom-[-20vw]">
+          <img 
+            src="../src/assets/FogoDeChao_014.jpg" 
+            alt="Sear & Serve" 
+            class="hidden lg:inline w-full h-full object-cover object-center"
+          />
+
+          <img
+          src="../src/assets/FogoDeChao_014.jpg"
+          alt="Sear & Serve"
+          class="lg:hidden w-full object-bottom object-contain"
+          />
+
+          <!-- Optional dark overlay -->
+          <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="container relative z-1">
+          <h1 class="text-white">Shop</h1>
+        </div>
+      </section>
+      <section id="shop" class="pt-12 shop-wrapper bg-white">
+        <div class="container">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12">
+
+            {{#each products}}
+            <!-- PRODUCT CARD START -->
+            <div class="block product-card">
+              <!-- PRODUCT LINK -->
+              <a href="{{url}}" class="group block">
+                <div class="overflow-hidden aspect-[4/3] rounded-md">
+                  <img 
+                    src="{{image}}" 
+                    alt="{{name}}" 
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                  />
+                </div>
+                
+                <div class="px-2 pt-4">
+                  <h5 class="text-2xl xl:text-3xl product-name text-black">
+                    {{name}}
+                  </h5>
+                  
+                  <div class="mt-2 mb-3">
+                    <h6 class="inline bg-beige text-sm lg:text-base text-black rounded-md px-2 py-1">
+                      {{badge}}
+                    </h6>
+                  </div>
+                </div>
+              </a>
+              <!-- /PRODUCT LINK -->
+              
+              <div class="px-2">
+                <p class="product-description mb-5">{{description}}</p>
+                <div class="flex justify-between items-end">
+                  <div class="product-meta-line">
+                    <strong class="text-3xl mr-1">${{price}}</strong>
+                    <span>({{weight}})</span>
+                  </div>
+                  <a class="btn btn-primary add-to-cart-btn" 
+                    data-product-id="{{id}}" 
+                    data-product-name="{{name}}" 
+                    data-product-price="{{price}}"
+                    data-product-image="{{image}}">
+                    Add to cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- PRODUCT CARD END -->
+            {{/each}}
+
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer}}
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

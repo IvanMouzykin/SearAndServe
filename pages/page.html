@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    {{> head}}
+    </head>
+    <body class="relative">
+    {{> nav}}
+        <main class="page-wrapper bg-black">
+            <section id="" class="hero">
+                <!-- Background Image -->
+                <div class="absolute inset-x-0 bottom-[-2rem] lg:bottom-[-20vw]">
+                <img 
+                    src="../src/assets/FogoDeChao_014.jpg" 
+                    alt="Sear & Serve" 
+                    class="hidden lg:inline w-full h-full object-cover object-center"
+                />
+
+                <img
+                src="../src/assets/FogoDeChao_014.jpg"
+                alt="Sear & Serve"
+                class="lg:hidden w-full object-bottom object-contain"
+                />
+
+                <!-- Optional dark overlay -->
+                <div class="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div class="container relative z-1">
+                <h1 class="text-white">Shipping policy</h1>
+                </div>
+            </section>
+            <section id="" class="pt-12 bg-white">
+                <div class="container max-w-5xl">
+                    <h3>Order Fulfillment</h3>
+                    <div class="">
+                        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 my-12">
+                            <div class="">
+                                <h6 class="text-3xl font-bold text-red-dark">FREE</h6>
+                                <p class="text-sm">on all orders $150.00 and up</p>
+                            </div>
+                            <div class="">
+                                <h6 class="text-3xl font-bold text-black/80">$9.99</h6>
+                                <p class="text-sm">East Coast Ground Shipping</p>
+                            </div>
+                            <div class="">
+                                <h6 class="text-3xl font-bold text-black/80">$18.99</h6>
+                                <p class="text-sm">East Coast Express or Central Ground</p>
+                            </div>
+                            <div class="">
+                                <h6 class="text-3xl font-bold text-black/80">$29.99</h6>
+                                <p class="text-sm">Central Express or West Coast Ground</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-base/7 mb-7">Cuisine Solutions offers different shipping rates based on your location, throughout the continental United States. Orders are fulfilled between Monday and Wednesday. To help ensure your order arrives in excellent condition, each order is shipped in a recyclable shipper box and packed with dry ice in a reusable polystyrene container.</p>
+                    <h5>Shipping Notes</h5>
+                    <p class="text-base/7 mb-7">Cuisine Solutions makes every attempt to fulfill orders based on customer requested ship date; however holidays and unforeseen circumstances can force exceptions to delivery. Below are important shipping notes to keep in mind when placing your order. All shipments require a street address (sorry, no PO boxes). Cuisine Solutions is not responsible for incorrect or incomplete shipping addresses. Be sure to double-check addresses. Inclement weather and other unforeseen circumstances can cause shipments to be delayed. Cuisine Solutions is not responsible for shipment delays caused by adverse or unpredictable weather conditions.</p>
+                </div>
+            </section>
+        </main>
+        {{> footer}}
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>

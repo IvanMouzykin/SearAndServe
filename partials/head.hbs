@@ -1,0 +1,38 @@
+<!-- partials/head.html -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>{{title}}</title>
+<meta name="description" content="{{description}}" />
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+
+<!-- Slider -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+
+<!-- Any other global meta tags or Open Graph -->
+<meta property="og:title" content="{{title}}" />
+<meta property="og:description" content="{{description}}" />
+<meta property="og:image" content="/assets/og-image.jpg" />
+
+<!-- Scripts or analytics that must be in <head> -->
+<style>
+    /* Page Loader State */
+
+    #page-loader{
+        position: fixed;
+        inset: 0;
+        background-color: black;
+        z-index: 9999;
+        transition: opacity;
+        transition-duration: 500ms;
+        pointer-events: none;
+    }
+
+    .loader-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+</style>

@@ -1,0 +1,55 @@
+<nav id="topNav" class="">
+    <div class="container py-4 mx-auto flex justify-between items-center">
+        <div class="block md:hidden _offcanvasToggler">
+            <button class="h-10 w-10 relative" type="button">
+                <div id="menu_checkbox">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </button>
+        </div>
+
+        <div class="flex items-center justify-between">
+            <a href="/index.html">
+                <img class="w-auto h-10 sm:h-14" src="/src/assets/SS_logo_inline_white.svg" alt="">
+            </a>
+        </div>
+
+        <div class="flex items-center">
+            <div class="hidden md:flex flex-col md:flex-row md:mx-6">
+                <a class="menu-item" href="/index.html">Home</a>
+                <a class="menu-item" href="/pages/shop.html">Shop</a>
+                <a class="menu-item" href="/pages/cuts.html">Cuts</a>
+                <a class="menu-item" href="/pages/recipes.html">Recipes</a>
+            </div>
+
+            <div class="flex justify-center md:block">
+                <a class="relative text-gray-200 transition-colors duration-300 transform hover:text-red" href="/cart/">
+                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span id="cart-counter" class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    
+    </div>
+</nav>
+
+<!-- Backdrop -->
+<div class="offcanvas-backdrop"></div>
+
+<!-- Offcanvas Menu -->
+<div class="offcanvas" tabindex="-1" id="offcanvas">
+    <div class="offcanvas-body pt-24 px-6">
+        <nav class="nav flex flex-col">
+            <a class="nav-link" href="/index.html">Home</a>
+            <a class="nav-link" href="/pages/shop.html">Shop</a>
+            <a class="nav-link" href="/pages/cuts.html">Cuts</a>
+            <a class="nav-link" href="/pages/recipes.html">Recipes</a>
+            <hr class="border-beige my-6 w-12">
+            <a class="nav-link" href="#">Cart</a>
+        </nav>
+    </div>
+</div>
