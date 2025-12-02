@@ -13,6 +13,13 @@ export default defineConfig({
         recipes: recipes
       },
       partialDirectory: './partials',
+      helpers: {
+        pickRandom: (arr, count) => {
+          if (!Array.isArray(arr)) return [];
+          const shuffled = [...arr].sort(() => 0.5 - Math.random());
+          return shuffled.slice(0, count);
+        }
+      },
     }),
   ],
   build: {
@@ -27,6 +34,7 @@ export default defineConfig({
         privacyPolicy: resolve(__dirname, 'pages/privacy-policy.html'),
         recipe: resolve(__dirname, 'pages/recipe.html'),
         recipes: resolve(__dirname, 'pages/recipes.html'),
+        cart: resolve(__dirname, 'pages/cart.html'),
       },
     },
   },

@@ -25,22 +25,26 @@
             </div>
 
             <div class="flex justify-center md:block">
-                <a class="relative text-gray-200 transition-colors duration-300 transform hover:text-red" href="/cart/">
+                <a id="cart-trigger"
+                    class="relative text-gray-200 transition-colors duration-300 transform hover:text-red cursor-pointer"
+                    href="#">
                     <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                            d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <span id="cart-counter" class="cart-badge">0</span>
                 </a>
             </div>
         </div>
-    
+
     </div>
 </nav>
 
 <!-- Backdrop -->
 <div class="offcanvas-backdrop"></div>
 
-<!-- Offcanvas Menu -->
+<!-- Offcanvas Menu (Left) -->
 <div class="offcanvas" tabindex="-1" id="offcanvas">
     <div class="offcanvas-body pt-24 px-6">
         <nav class="nav flex flex-col">
@@ -51,5 +55,104 @@
             <hr class="border-beige my-6 w-12">
             <a class="nav-link" href="#">Cart</a>
         </nav>
+    </div>
+</div>
+
+<!-- Cart Drawer (Right) -->
+<div class="offcanvas-right" tabindex="-1" id="cart-offcanvas">
+    <div class="h-full flex flex-col bg-white shadow-xl px-4 py-6 sm:px-6">
+        <!-- Header -->
+        <div class="flex items-center justify-between">
+            <h2 class="text-xl font-medium text-gray-900 m-0" id="slide-over-title">Shopping cart</h2>
+            <div class="ml-3 flex h-7 items-center">
+                <button type="button" class="cart-close-btn relative -m-2 p-2 text-gray-400 hover:text-gray-500">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Close panel</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 overflow-y-auto">
+            <div class="mt-8">
+                <div class="flow-root">
+                    <ul role="list" class="-my-6 divide-y divide-gray-200">
+                        <!-- Static Item 1 -->
+                        <li class="flex py-6">
+                            <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                <img src="/src/assets/BoneIn.jpg" alt="Bone-In Beef Short Rib"
+                                    class="h-full w-full object-cover object-center">
+                            </div>
+                            <div class="ml-4 flex flex-1 flex-col">
+                                <div>
+                                    <div class="flex justify-between text-base font-medium text-gray-900">
+                                        <h3 class="text-lg"><a href="#">Bone-In Beef Short Rib</a></h3>
+                                        <p class="ml-4">$30.99</p>
+                                    </div>
+                                    <p class="mt-1 text-sm text-gray-500">16.0 oz.</p>
+                                </div>
+                                <div class="flex flex-1 items-end justify-between text-sm">
+                                    <p class="text-gray-500">Qty 1</p>
+                                    <div class="flex">
+                                        <button type="button"
+                                            class="font-medium text-red hover:text-red-dark">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Static Item 2 -->
+                        <li class="flex py-6">
+                            <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                <img src="/src/assets/Ribeye.jpg" alt="Ribeye Steak"
+                                    class="h-full w-full object-cover object-center">
+                            </div>
+                            <div class="ml-4 flex flex-1 flex-col">
+                                <div>
+                                    <div class="flex justify-between text-base font-medium text-gray-900">
+                                        <h3 class="text-lg"><a href="#">Ribeye Steak</a></h3>
+                                        <p class="ml-4">$30.99</p>
+                                    </div>
+                                    <p class="mt-1 text-sm text-gray-500">16.0 oz.</p>
+                                </div>
+                                <div class="flex flex-1 items-end justify-between text-sm">
+                                    <p class="text-gray-500">Qty 1</p>
+                                    <div class="flex">
+                                        <button type="button"
+                                            class="font-medium text-red hover:text-red-dark">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="border-t border-gray-200 pt-4">
+            <div class="flex justify-between text-base font-medium text-gray-900">
+                <p>Subtotal</p>
+                <p>$61.98</p>
+            </div>
+            <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+            <div class="mt-6">
+                <a href="#"
+                    class="flex items-center justify-center rounded-md border border-transparent bg-red px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-red-dark">Checkout</a>
+            </div>
+            <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
+                <p>
+                    or
+                    <a href="/pages/cart.html" class="font-lg text-red hover:text-red-dark">
+                        Go to cart
+                        <span aria-hidden="true"> &rarr;</span>
+                    </a>
+                </p>
+            </div>
+        </div>
     </div>
 </div>
